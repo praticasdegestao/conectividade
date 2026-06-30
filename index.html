@@ -32,65 +32,43 @@
   }
   header h1{margin:0 0 6px;font-size:26px;}
   header p{margin:0;opacity:.92;font-size:14px;}
-  .meta{
-    display:flex;flex-wrap:wrap;gap:10px;margin-top:18px;
-  }
-  .meta span{
-    background:rgba(255,255,255,.12);padding:6px 14px;border-radius:6px;font-size:13px;
-  }
-  section{padding:28px 40px;border-bottom:1px solid #eceff1;}
-  h2{
-    font-size:20px;color:var(--verde-escuro);margin:0 0 16px;
-    display:flex;align-items:center;gap:10px;
-  }
-  h2 .num{
-    background:var(--verde);color:#fff;width:30px;height:30px;border-radius:50%;
-    display:inline-flex;align-items:center;justify-content:center;font-size:15px;flex:none;
-  }
+  .meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px;}
+  .meta span{background:rgba(255,255,255,.12);padding:6px 14px;border-radius:6px;font-size:13px;}
+  /* Índice */
+  .indice{background:var(--cinza-claro);padding:22px 40px;border-bottom:1px solid #e3e7ea;}
+  .indice h3{margin:0 0 12px;font-size:14px;text-transform:uppercase;letter-spacing:1px;color:var(--verde-escuro);}
+  .indice-cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:6px 24px;}
+  .indice a{display:block;color:var(--cinza);text-decoration:none;padding:5px 8px;border-radius:5px;font-size:14px;}
+  .indice a:hover{background:#fff;color:var(--verde);}
+  .indice .p2{color:var(--roxo);}
+  section{padding:28px 40px;border-bottom:1px solid #eceff1;scroll-margin-top:12px;}
+  h2{font-size:20px;color:var(--verde-escuro);margin:0 0 16px;display:flex;align-items:center;gap:10px;}
+  h2 .num{background:var(--verde);color:#fff;width:34px;height:34px;border-radius:50%;
+    display:inline-flex;align-items:center;justify-content:center;font-size:14px;flex:none;}
   h2.roxo{color:var(--roxo);}
   h2.roxo .num{background:var(--roxo);}
   h3{font-size:16px;margin:22px 0 10px;color:var(--cinza);}
   p{margin:0 0 12px;}
-  .resumo{
-    background:var(--cinza-claro);border-left:5px solid var(--verde);
-    padding:18px 22px;border-radius:0 8px 8px 0;
-  }
-  /* divisor de parte */
-  .parte{
-    background:linear-gradient(120deg,#263238,#37474f);
-    color:#fff;padding:24px 40px;
-  }
-  .parte .tag{
-    display:inline-block;background:var(--roxo);
-    padding:3px 12px;border-radius:14px;font-size:11px;letter-spacing:1px;
-    text-transform:uppercase;margin-bottom:8px;
-  }
+  .resumo{background:var(--cinza-claro);border-left:5px solid var(--verde);padding:18px 22px;border-radius:0 8px 8px 0;}
+  .parte{background:linear-gradient(120deg,#263238,#37474f);color:#fff;padding:24px 40px;}
+  .parte .tag{display:inline-block;background:var(--roxo);padding:3px 12px;border-radius:14px;font-size:11px;
+    letter-spacing:1px;text-transform:uppercase;margin-bottom:8px;}
   .parte h2{color:#fff;margin:0;font-size:22px;}
-  .parte h2::before{content:"";}
   .parte p{margin:8px 0 0;opacity:.9;font-size:13px;}
-  /* Caixas de farol */
   .farois{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin:18px 0;}
   .farol{border-radius:10px;padding:16px;color:#fff;}
   .farol h4{margin:0 0 6px;font-size:14px;text-transform:uppercase;letter-spacing:.5px;}
   .farol .v{font-size:26px;font-weight:700;}
   .farol small{display:block;opacity:.9;font-size:12px;margin-top:4px;font-weight:400;}
-  .f-verde{background:var(--verde);}
-  .f-laranja{background:var(--laranja);}
-  .f-vermelho{background:var(--vermelho);}
-  .f-azul{background:var(--azul);}
-  .f-roxo{background:var(--roxo);}
-  /* Tabelas */
+  .f-verde{background:var(--verde);} .f-laranja{background:var(--laranja);}
+  .f-vermelho{background:var(--vermelho);} .f-azul{background:var(--azul);} .f-roxo{background:var(--roxo);}
   table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px;}
   th{background:var(--verde-escuro);color:#fff;text-align:left;padding:10px 12px;}
   th.roxo{background:var(--roxo);}
   td{padding:10px 12px;border-bottom:1px solid #e3e7ea;vertical-align:top;}
   tr:nth-child(even) td{background:#f8faf9;}
-  /* Badges */
   .badge{display:inline-block;padding:2px 9px;border-radius:12px;font-size:11px;font-weight:600;color:#fff;}
-  .b-alta{background:var(--vermelho);}
-  .b-media{background:var(--laranja);}
-  .b-baixa{background:var(--verde);}
-  /* Caixas temáticas */
+  .b-alta{background:var(--vermelho);} .b-media{background:var(--laranja);} .b-baixa{background:var(--verde);}
   .box{border-radius:10px;padding:18px 20px;margin:16px 0;}
   .box h3{margin-top:0;}
   .box-pontos{background:var(--vermelho-claro);border-left:5px solid var(--vermelho);}
@@ -100,43 +78,59 @@
   .box-pratica{background:var(--roxo-claro);border-left:5px solid var(--roxo);}
   ul.clean{margin:6px 0 6px 0;padding-left:20px;}
   ul.clean li{margin-bottom:7px;}
-  .pill{display:inline-block;background:#fff;border:1px solid #cfd8dc;border-radius:20px;
-        padding:4px 12px;margin:3px;font-size:12px;}
-  /* Linha do tempo de ações */
+  .pill{display:inline-block;background:#fff;border:1px solid #cfd8dc;border-radius:20px;padding:4px 12px;margin:3px;font-size:12px;}
   .timeline{margin:18px 0;}
   .t-item{display:flex;gap:14px;margin-bottom:14px;align-items:flex-start;}
   .t-prazo{flex:none;width:120px;font-weight:700;font-size:13px;padding:6px 10px;border-radius:6px;color:#fff;text-align:center;}
-  .p-curto{background:var(--vermelho);}
-  .p-medio{background:var(--laranja);}
-  .p-longo{background:var(--verde);}
+  .p-curto{background:var(--vermelho);} .p-medio{background:var(--laranja);} .p-longo{background:var(--verde);}
   .t-desc{background:var(--cinza-claro);padding:10px 14px;border-radius:6px;flex:1;}
   footer{background:var(--cinza);color:#cfd8dc;padding:22px 40px;font-size:13px;}
   footer strong{color:#fff;}
   .kpi-note{font-size:12px;color:#78909c;font-style:italic;margin-top:4px;}
   .fonte{font-size:12px;color:#78909c;font-style:italic;}
+  .topo{text-align:right;}
+  .topo a{font-size:12px;color:#90a4ae;text-decoration:none;}
+  .topo a:hover{color:var(--verde);}
 </style>
 </head>
 <body>
-<div class="wrap">
+<div class="wrap" id="topo">
 
 <header>
   <span class="tag">Nota Técnica Gerencial</span>
   <h1>Inovação Agropecuária no Estado da Bahia</h1>
   <p>Análise crítica do Diagnóstico Estadual e recomendações para fortalecer o ecossistema de inovação e a competitividade das cadeias produtivas</p>
   <div class="meta">
-    <span>📍 Recorte: Conectividade, ATER e Práticas de Referência</span>
+    <span>📍 Conectividade · ATER · Práticas de Referência · Living Labs</span>
     <span>📄 Base: Diagnóstico Estadual de Inovação Agropecuária (jun/2026)</span>
     <span>🎯 Público: gestores e tomadores de decisão</span>
   </div>
 </header>
 
+<!-- ÍNDICE -->
+<nav class="indice">
+  <h3>Conteúdo</h3>
+  <div class="indice-cols">
+    <a href="#sumario"><strong>Sumário Executivo</strong></a>
+    <a href="#itemA">A · Conectividade e Transformação Digital</a>
+    <a href="#itemB">B · ATER e Adoção de Tecnologias</a>
+    <a href="#elo">⇄ Elo Estratégico: Conectividade + ATER</a>
+    <a href="#capVII" class="p2">VII · Semear Digital e Conectividade</a>
+    <a href="#capVIII" class="p2">VIII · Adoção de Tecnologias Agrícolas</a>
+    <a href="#capIX" class="p2">IX · ATER Digital</a>
+    <a href="#capX" class="p2">X · Living Labs / Farm Labs</a>
+    <a href="#sintese" class="p2">∑ Síntese Integradora</a>
+    <a href="#plano">✓ Plano de Ação</a>
+    <a href="#conclusao">∎ Conclusão</a>
+  </div>
+</nav>
+
 <!-- SUMÁRIO EXECUTIVO -->
-<section>
+<section id="sumario">
   <h2><span class="num">!</span>Sumário Executivo</h2>
   <div class="resumo">
-    <p>O Diagnóstico evidencia uma Bahia com vocação agropecuária robusta e ecossistema de inovação diversificado, porém com dois <strong>gargalos transversais</strong> que limitam o salto para a Agricultura 4.0/5.0: a <strong>baixa conectividade rural</strong> e a <strong>cobertura insuficiente da Assistência Técnica e Extensão Rural (ATER)</strong>. Ambos formam um ciclo de dependência: sem conectividade, a ATER digital não escala; sem ATER capilarizada, a tecnologia disponível não é absorvida pelo produtor. Esta Nota propõe tratar os dois eixos de forma <strong>integrada</strong> e, na sua segunda parte, incorpora <strong>boas práticas de referência</strong> (Semear Digital, condicionantes da adoção tecnológica e ATER Digital) para preencher as lacunas identificadas.</p>
+    <p>O Diagnóstico evidencia uma Bahia com vocação agropecuária robusta e ecossistema de inovação diversificado, porém com dois <strong>gargalos transversais</strong> que limitam o salto para a Agricultura 4.0/5.0: a <strong>baixa conectividade rural</strong> e a <strong>cobertura insuficiente da Assistência Técnica e Extensão Rural (ATER)</strong>. Ambos formam um ciclo de dependência: sem conectividade, a ATER digital não escala; sem ATER capilarizada, a tecnologia disponível não é absorvida pelo produtor. Esta Nota propõe tratar os dois eixos de forma <strong>integrada</strong> e, na sua segunda parte, incorpora <strong>quatro conjuntos de boas práticas de referência</strong> (Semear Digital, condicionantes da adoção tecnológica, ATER Digital e Living Labs/Farm Labs) para preencher as lacunas identificadas.</p>
   </div>
-
   <div class="farois">
     <div class="farol f-vermelho">
       <h4>Conectividade rural</h4>
@@ -163,9 +157,8 @@
 </section>
 
 <!-- ITEM A -->
-<section>
+<section id="itemA">
   <h2><span class="num">A</span>Conectividade e Transformação Digital no Campo</h2>
-
   <div class="box box-pontos">
     <h3>🔎 Análise crítica — fragilidades identificadas no Diagnóstico</h3>
     <ul class="clean">
@@ -175,17 +168,15 @@
       <li><strong>Fragilidade de dados:</strong> inconsistências nos indicadores de área e ausência de série histórica padronizada dificultam o monitoramento e a priorização de investimentos.</li>
     </ul>
   </div>
-
   <div class="box box-oport">
     <h3>🌱 Como explorar para ganhar competitividade</h3>
     <ul class="clean">
       <li><strong>Conectividade como infraestrutura produtiva</strong> (não apenas inclusão digital): direcionar o Conecta Bahia para corredores produtivos — Oeste (grãos/algodão), Vale do São Francisco (fruticultura) e Sul (cacau) — priorizando cobertura em campo aberto.</li>
-      <li><strong>Modelos alternativos de cobertura:</strong> aproveitar a faixa de frequência destinada à conectividade rural (proveniente do leilão do 5G), redes privativas LTE/5G em condomínios de armazéns e cooperativas, internet via satélite de baixa órbita (LEO) e soluções de baixo custo (LoRaWAN) para telemetria e sensoriamento que não exigem alta banda.</li>
+      <li><strong>Modelos alternativos de cobertura:</strong> aproveitar a faixa de frequência destinada à conectividade rural (leilão do 5G), redes privativas LTE/5G em condomínios de armazéns e cooperativas, internet via satélite de baixa órbita (LEO) e soluções de baixo custo (LoRaWAN) para telemetria e sensoriamento.</li>
       <li><strong>Parcerias multiatores:</strong> articular ANATEL, ConectarAGRO, AIBA, cooperativas e tradings em um <em>Plano Estadual de Conectividade Agro</em>, com contrapartidas privadas onde o retorno produtivo já justifica investimento.</li>
-      <li><strong>Vinculação a casos de uso de retorno mensurável:</strong> rastreabilidade para acesso a mercados externos (já uma vocação da fruticultura e do cacau), uso eficiente de insumos, monitoramento climático e automação de irrigação.</li>
+      <li><strong>Vinculação a casos de uso de retorno mensurável:</strong> rastreabilidade para exportação (vocação da fruticultura e do cacau), uso eficiente de insumos, monitoramento climático e automação de irrigação.</li>
     </ul>
   </div>
-
   <h3>Priorização sugerida por região</h3>
   <table>
     <tr><th>Região / Cadeia</th><th>Caso de uso prioritário</th><th>Tecnologia indicada</th><th>Prioridade</th></tr>
@@ -194,46 +185,45 @@
     <tr><td>Sul/Baixo Sul (cacau-cabruca)</td><td>Rastreabilidade de origem e monitoramento florestal</td><td>LoRaWAN + satélite</td><td><span class="badge b-media">Média</span></td></tr>
     <tr><td>Semiárido (agricultura familiar/caprinos)</td><td>Inclusão digital, ATER digital, mercado</td><td>Wi-Fi comunitário + satélite</td><td><span class="badge b-media">Média</span></td></tr>
   </table>
+  <div class="topo"><a href="#topo">▲ voltar ao topo</a></div>
 </section>
 
 <!-- ITEM B -->
-<section>
+<section id="itemB">
   <h2><span class="num">B</span>Assistência Técnica, Extensão Rural e Adoção de Tecnologias</h2>
-
   <div class="box box-pontos">
     <h3>🔎 Análise crítica — fragilidades identificadas no Diagnóstico</h3>
     <ul class="clean">
       <li><strong>Cobertura insuficiente:</strong> apenas ~5,2% dos 665,8 mil estabelecimentos familiares atendidos/ano, com meta declarada de chegar a 12% — ainda baixa frente ao maior contingente de agricultores familiares do país.</li>
-      <li><strong>Adoção tecnológica incipiente:</strong> o Diagnóstico reconhece que, além do SIGATER (Power BI) e do aplicativo COLETUM de coleta de dados, não foram identificadas tecnologias relevantes de transformação no campo.</li>
-      <li><strong>Dependência da conectividade:</strong> programas de capacitação online (ex.: Programaê) têm a qualidade comprometida exatamente pela baixa cobertura rural — reforçando a interdependência dos eixos A e B.</li>
-      <li><strong>Falha de monitoramento:</strong> o relatório admite não conseguir mensurar o número de municípios atendidos por Território de Identidade, o que impede gestão baseada em evidências.</li>
-      <li><strong>Fragmentação institucional:</strong> ações de Bahiater, Sistema FAEB/SENAR e institutos contratados operam de forma pouco integrada, dificultando a visão consolidada de cobertura.</li>
+      <li><strong>Adoção tecnológica incipiente:</strong> além do SIGATER (Power BI) e do aplicativo COLETUM de coleta de dados, não foram identificadas tecnologias relevantes de transformação no campo.</li>
+      <li><strong>Dependência da conectividade:</strong> programas de capacitação online (ex.: Programaê) têm a qualidade comprometida pela baixa cobertura rural — reforçando a interdependência dos eixos A e B.</li>
+      <li><strong>Falha de monitoramento:</strong> o relatório admite não conseguir mensurar o número de municípios atendidos por Território de Identidade, impedindo gestão baseada em evidências.</li>
+      <li><strong>Fragmentação institucional:</strong> ações de Bahiater, Sistema FAEB/SENAR e institutos contratados operam de forma pouco integrada.</li>
     </ul>
   </div>
-
   <div class="box box-oport">
     <h3>🌱 Como explorar para ganhar competitividade</h3>
     <ul class="clean">
-      <li><strong>ATER como vetor de inovação (e não só de difusão de práticas):</strong> reposicionar o extensionista como agente de transferência tecnológica, conectando o produtor ao ecossistema (Embrapa Mandioca e Fruticultura, CETAB, Semear Hub, parques tecnológicos e agtechs).</li>
-      <li><strong>ATER digital híbrida:</strong> combinar presença física (essencial para a confiança no agro, como o próprio Diagnóstico aponta) com ferramentas digitais — evoluir do COLETUM/SIGATER para plataformas com recomendação técnica, sensoriamento remoto e diagnóstico assistido por IA.</li>
-      <li><strong>Living Labs e validação em campo (TRL 5–8):</strong> usar a rede ATER para criar pontos de validação de tecnologias junto aos produtores, resolvendo a fragilidade apontada no Diagnóstico de que parques e hubs estão distantes dos polos produtivos.</li>
-      <li><strong>Capacitação de extensionistas em tecnologias digitais:</strong> replicar o modelo de imersão já usado no programa "Bahia que Produz e Alimenta" (com a UFRB) para formar técnicos em agricultura de precisão, bioinsumos e gestão de dados.</li>
-      <li><strong>Integração com os bioinsumos e a bioeconomia:</strong> a ATER pode acelerar a adoção das soluções já produzidas no estado (biofábricas de Ilhéus, CIMATEC, polo de Barreiras/LEM), encurtando o caminho da pesquisa ao mercado.</li>
+      <li><strong>ATER como vetor de inovação:</strong> reposicionar o extensionista como agente de transferência tecnológica, conectando o produtor ao ecossistema (Embrapa Mandioca e Fruticultura, CETAB, Semear Hub, parques tecnológicos e agtechs).</li>
+      <li><strong>ATER digital híbrida:</strong> combinar presença física (essencial para a confiança no agro) com ferramentas digitais — evoluir do COLETUM/SIGATER para plataformas com recomendação técnica, sensoriamento remoto e diagnóstico assistido por IA.</li>
+      <li><strong>Living Labs e validação em campo (TRL 5–8):</strong> usar a rede ATER para criar pontos de validação de tecnologias junto aos produtores.</li>
+      <li><strong>Capacitação de extensionistas em tecnologias digitais:</strong> replicar o modelo de imersão usado no "Bahia que Produz e Alimenta" (com a UFRB).</li>
+      <li><strong>Integração com bioinsumos e bioeconomia:</strong> a ATER pode acelerar a adoção das soluções já produzidas no estado (biofábricas de Ilhéus, CIMATEC, polo de Barreiras/LEM).</li>
     </ul>
   </div>
-
   <h3>Indicadores propostos para gestão da ATER</h3>
   <table>
     <tr><th>Indicador</th><th>Situação no Diagnóstico</th><th>Meta gerencial sugerida</th></tr>
-    <tr><td>Cobertura de estabelecimentos familiares</td><td>~5,2%/ano</td><td>12% no curto prazo; trajetória definida por Território</td></tr>
+    <tr><td>Cobertura de estabelecimentos familiares</td><td>~5,2%/ano</td><td>12% no curto prazo; trajetória por Território</td></tr>
     <tr><td>Municípios atendidos por Território de Identidade</td><td>Não mensurado</td><td>100% rastreável em painel público</td></tr>
     <tr><td>% de atendimentos com uso de ferramenta digital</td><td>Não consolidado</td><td>Linha de base + meta anual</td></tr>
     <tr><td>Tecnologias transferidas via ATER/ano</td><td>Não identificado</td><td>Catálogo vinculado a Embrapa/CETAB/agtechs</td></tr>
   </table>
+  <div class="topo"><a href="#topo">▲ voltar ao topo</a></div>
 </section>
 
-<!-- INTEGRAÇÃO -->
-<section>
+<!-- ELO -->
+<section id="elo">
   <h2><span class="num">⇄</span>O Elo Estratégico: Conectividade + ATER</h2>
   <div class="box box-alerta">
     <p>Os dois eixos não devem ser tratados isoladamente. A baixa conectividade <strong>esvazia</strong> o potencial da ATER digital, e uma ATER fraca <strong>desperdiça</strong> a infraestrutura de conexão instalada. Tratá-los como um único programa integrado gera efeito multiplicador:</p>
@@ -251,20 +241,18 @@
 <div class="parte">
   <span class="tag">Parte II — Práticas de Referência</span>
   <h2>Boas práticas aplicáveis ao Ecossistema de Inovação da Bahia</h2>
-  <p>Cruzamento de práticas validadas — Semear Digital, condicionantes da adoção tecnológica e ATER Digital — com as lacunas do Diagnóstico baiano. O município de <strong>Boa Vista do Tupim (Caatinga)</strong> já integra a rede de Distritos Agrotecnológicos do Semear Digital, oferecendo à Bahia uma porta de entrada imediata.</p>
+  <p>Cruzamento de quatro conjuntos de práticas validadas — Semear Digital, condicionantes da adoção tecnológica, ATER Digital e Living Labs/Farm Labs — com as lacunas do Diagnóstico baiano. O município de <strong>Boa Vista do Tupim (Caatinga)</strong> já integra a rede de Distritos Agrotecnológicos do Semear Digital, oferecendo à Bahia uma porta de entrada imediata.</p>
 </div>
 
 <!-- CAPÍTULO VII -->
-<section>
+<section id="capVII">
   <h2 class="roxo"><span class="num">VII</span>Boas Práticas do Projeto Semear Digital e Conectividade</h2>
-
   <div class="box box-pratica">
     <h3>📘 O que o modelo oferece</h3>
     <p>O Centro de Ciência para o Desenvolvimento em Agricultura Digital (Semear Digital) propõe um modelo replicável assentado em três pilares: PD&I em tecnologias digitais; soluções de conectividade; e inclusão deliberada de pequenos e médios produtores. Sua engenharia repousa nos <strong>Distritos Agrotecnológicos (DAT)</strong> — fazendas reais onde IA, sensoriamento remoto, automação, agricultura de precisão e rastreabilidade são validados <em>em campo</em>, junto ao produtor.</p>
     <p style="margin-bottom:0;">A própria <strong>metodologia de diagnóstico agroambiental</strong> é uma prática transferível: consolida, em base georreferenciada, hipsometria e declividade (FABDEM), balanço hídrico (FAO/INMET), demanda hídrica por cultura (CropWaterBalance), pedologia, estrutura fundiária (CAR), dinâmica de uso da terra 1985–2022 (MapBiomas) e potencial agrícola de pastagens degradadas (Atlas das Pastagens).</p>
     <p class="fonte">Fonte: Embrapa Meio Ambiente — Diagnóstico Agroambiental dos Municípios com os DAT do projeto Semear Digital (2025).</p>
   </div>
-
   <h3>Lacunas do Diagnóstico → prática recomendada</h3>
   <table>
     <tr><th class="roxo">Lacuna baiana</th><th class="roxo">Prática Semear aplicável</th><th class="roxo">Prioridade</th></tr>
@@ -272,16 +260,15 @@
     <tr><td>Distância entre ativos tecnológicos e polos produtivos (validação TRL 5–8)</td><td>Criar DATs nos corredores: Boa Vista do Tupim (Semiárido-âncora), Oeste, Vale do São Francisco e Sul, como <em>living labs</em> permanentes</td><td><span class="badge b-alta">Alta</span></td></tr>
     <tr><td>72,5% da área agricultável sem cobertura</td><td>Replicar arranjo MDA–Embrapa de conectividade; reorientar o Conecta Bahia "da porteira para dentro"</td><td><span class="badge b-alta">Alta</span></td></tr>
   </table>
-
   <div class="box box-acao">
     <p style="margin-bottom:0;"><strong>Ancoragem nos ativos existentes:</strong> os DATs devem operar sobre a base já instalada — Embrapa Mandioca e Fruticultura, CETAB, CIMATEC Sertão e Park, Centro de Excelência em Fruticultura do Vale do São Francisco e Semear Hub (Sistema FAEB) — evitando duplicação de estruturas.</p>
   </div>
+  <div class="topo"><a href="#topo">▲ voltar ao topo</a></div>
 </section>
 
 <!-- CAPÍTULO VIII -->
-<section>
+<section id="capVIII">
   <h2 class="roxo"><span class="num">VIII</span>Práticas de Adoção de Tecnologias Agrícolas</h2>
-
   <div class="box box-pratica">
     <h3>📗 Os quatro condicionantes da adoção</h3>
     <p>O estudo sistematiza os determinantes da adoção em quatro conjuntos que <strong>interagem entre si</strong>, concluindo que controlar uma única variável não garante o sucesso da difusão — é preciso desenhar políticas <strong>flexíveis e adaptáveis</strong> a cada comunidade. Alerta ainda que a heterogeneidade na adoção <em>não é automaticamente um sinal negativo</em> e deve ser analisada caso a caso.</p>
@@ -293,7 +280,6 @@
     </p>
     <p class="fonte">Fonte: Souza Filho et al. — Condicionantes da adoção de inovações tecnológicas na agricultura (Cadernos de Ciência & Tecnologia, 2011).</p>
   </div>
-
   <h3>Aplicação aos gargalos baianos</h3>
   <table>
     <tr><th class="roxo">Condicionante</th><th class="roxo">Lacuna baiana correlata</th><th class="roxo">Recomendação</th></tr>
@@ -302,16 +288,15 @@
     <tr><td>Características físico-ambientais</td><td>Pacotes inadequados ao território; déficit hídrico no Semiárido</td><td>Condicionar transferência (CETAB/Embrapa/agtechs) à aderência edafoclimática local — usando a base do Semear (Cap. VII)</td></tr>
     <tr><td>Fatores sistêmicos</td><td>Burocracia de registro no MAPA; ausência de manual didático</td><td>Tratar ambiente regulatório e acesso a mercado como condicionantes tão críticos quanto a oferta de tecnologia</td></tr>
   </table>
-
   <div class="box box-alerta">
     <p style="margin-bottom:0;">⚠️ <strong>Erro a evitar:</strong> o estudo descreve o caso recorrente de projetos "tecnicamente sólidos, mas inadequados à realidade econômica", que são <em>abandonados</em> assim que se esgotam os recursos externos. A base agroambiental do Semear é o instrumento para recomendar "a tecnologia certa para o lugar certo".</p>
   </div>
+  <div class="topo"><a href="#topo">▲ voltar ao topo</a></div>
 </section>
 
 <!-- CAPÍTULO IX -->
-<section>
+<section id="capIX">
   <h2 class="roxo"><span class="num">IX</span>Práticas de ATER Digital</h2>
-
   <div class="box box-pratica">
     <h3>📙 Lições do Espírito Santo e da plataforma ATER+ Digital</h3>
     <ul class="clean" style="margin-bottom:0;">
@@ -321,7 +306,6 @@
     </ul>
     <p class="fonte">Fontes: Nascimento et al. — Perspectivas e desafios da Ater Digital para o ES (Incaper em Revista, 2024); Plataforma ATER+ Digital (Embrapa).</p>
   </div>
-
   <h3>Lacunas do Diagnóstico → prática recomendada</h3>
   <table>
     <tr><th class="roxo">Lacuna baiana</th><th class="roxo">Prática ATER Digital aplicável</th><th class="roxo">Prioridade</th></tr>
@@ -330,7 +314,6 @@
     <tr><td>Conteúdo e capacitação limitados (só SIGATER/COLETUM)</td><td>Integrar a plataforma ATER+ Digital nas cadeias de vocação baiana (café, caju, caprinos/ovinos, mandioca, manga, maracujá, melão, uva, apicultura)</td><td><span class="badge b-media">Média</span></td></tr>
     <tr><td>Capacitação online comprometida pela conectividade</td><td>Priorizar materiais para uso offline; capacitar extensionistas em metodologias digitais (modelo de imersão UFRB)</td><td><span class="badge b-media">Média</span></td></tr>
   </table>
-
   <div class="box box-acao">
     <h3>Diretrizes operacionais sugeridas</h3>
     <p style="margin-bottom:0;">
@@ -343,15 +326,81 @@
       <span class="pill">Capacitar técnicos e agricultores; inclusão de povos tradicionais</span>
     </p>
   </div>
+  <div class="topo"><a href="#topo">▲ voltar ao topo</a></div>
+</section>
+
+<!-- CAPÍTULO X -->
+<section id="capX">
+  <h2 class="roxo"><span class="num">X</span>Living Labs / Farm Labs como Infraestrutura de Adoção e Extensão</h2>
+  <div class="box box-pratica">
+    <h3>🧪 O que são e por que importam</h3>
+    <p>Um <strong>Living Lab</strong> (laboratório vivo) ou <strong>Farm Lab</strong> é um ambiente real de produção — fazenda, área experimental — que une conhecimento científico e setor produtivo para <strong>testar, avaliar e validar</strong> soluções (produtos, serviços e processos) em condições reais, acelerando a adoção de tecnologias. Operam pela lógica da <strong>quádrupla hélice</strong>: empresas, universidade, governo e sociedade civil, em processos de cocriação, prototipagem rápida e demonstração.</p>
+    <p style="margin-bottom:0;"><strong>Dois modelos de referência:</strong> o <em>Advanced Farm 360 Living Lab</em> (UFSM), com +130 ha para validação, +20 máquinas com tecnologia embarcada, integração lavoura-pecuária, +20 conexões com laboratórios e suporte de PI e jurídico; e o <em>AgNest Farm Lab</em> (Embrapa, Jaguariúna/SP), <em>hub</em> de inovação aberta em modelo <em>plug and play</em>, com 60 ha, <em>smart lab</em>, espaço <em>maker</em> e <em>coworking</em>, reunindo Embrapa, Banco do Brasil, Bayer, Nutrien e Jacto, dentro do Corredor de Inovação Agropecuária de SP.</p>
+    <p class="fonte">Fontes: Advanced Farm 360 Living Lab — UFSM/InovaTec; AgNest Farm Lab — Embrapa Meio Ambiente e Embrapa Agricultura Digital (2023).</p>
+  </div>
+  <div class="farois">
+    <div class="farol f-roxo">
+      <h4>UFSM · validação</h4>
+      <div class="v">+130 ha</div>
+      <small>+20 máquinas com eletrônica embarcada · ILP · culturas irrigadas e perenes</small>
+    </div>
+    <div class="farol f-roxo">
+      <h4>UFSM · conexões</h4>
+      <div class="v">+20 labs</div>
+      <small>+25 grupos de pesquisa · +10 pós-graduações · suporte de PI e jurídico</small>
+    </div>
+    <div class="farol f-azul">
+      <h4>AgNest · modelo</h4>
+      <div class="v">Plug & Play</div>
+      <small>campo + smart lab + maker + coworking · inovação aberta da ideação ao mercado</small>
+    </div>
+    <div class="farol f-verde">
+      <h4>AgNest · vitrine</h4>
+      <div class="v">Safrinha</div>
+      <small>agtechs demonstram soluções no ciclo produtivo real (vitrine tecnológica)</small>
+    </div>
+  </div>
+  <div class="box box-pontos">
+    <h3>🔎 Por que a Bahia precisa disso — lacunas do Diagnóstico</h3>
+    <ul class="clean">
+      <li><strong>Distância entre ativos e produção:</strong> o Parque Tecnológico está na RM de Salvador, longe dos polos do Oeste, Semiárido e Sul — sem <em>living labs</em> agro estruturados, reduz-se a velocidade de teste, adoção e escalabilidade.</li>
+      <li><strong>Ausência de validação em campo (TRL 5–8):</strong> o Diagnóstico aponta que a inovação no agro exige experimentação prática, acesso a propriedades e interação contínua com produtores — exatamente o que um Farm Lab oferece.</li>
+      <li><strong>"Vale da morte" das startups:</strong> falta capital semente e ambiente de testes permanente; agtechs nascem na Bahia e migram para escalar em outros estados.</li>
+      <li><strong>Lacuna de mediação:</strong> a governança própria do agro (AIBA, cooperativas, tradings) nem sempre se integra às redes tecnológicas urbanas — falta uma ponte formalizada.</li>
+    </ul>
+  </div>
+  <div class="box box-oport">
+    <h3>🌱 Como o Living Lab/Farm Lab preenche as lacunas e fortalece a ATER</h3>
+    <ul class="clean">
+      <li><strong>Ponte com a adoção (Cap. VIII):</strong> ao validar tecnologia em condições edafoclimáticas reais e com o produtor presente, o Farm Lab ataca diretamente os condicionantes da adoção — reduz risco percebido, gera "autoeficácia pela observação" e evita pacotes inadequados ao território.</li>
+      <li><strong>Vetor da ATER (Cap. IX):</strong> o extensionista deixa de ser apenas difusor e passa a ser <em>curador</em> de soluções validadas no Farm Lab, levando ao produtor apenas o que já provou desempenho — elevando a qualidade e a confiança da extensão.</li>
+      <li><strong>Vitrine demonstrativa:</strong> o modelo "demonstração na safrinha" do AgNest pode ser replicado nas safras baianas, transformando dias de campo em experiência prática de alto impacto para a agricultura familiar.</li>
+      <li><strong>Retenção de agtechs:</strong> ambiente de testes permanente + suporte de PI e jurídico (modelo UFSM) + capital semente combatem o "vale da morte" e fixam as startups no estado.</li>
+      <li><strong>Quádrupla hélice territorializada:</strong> integra AIBA, cooperativas e tradings (governança do agro) com universidades e NITs (UFBA, UESC, UEFS, UFRB), formalizando a mediação hoje ausente.</li>
+    </ul>
+  </div>
+  <h3>Rede de Farm Labs sugerida para a Bahia</h3>
+  <table>
+    <tr><th class="roxo">Farm Lab (âncora)</th><th class="roxo">Cadeia / foco de validação</th><th class="roxo">Parceiro-base existente</th><th class="roxo">Prioridade</th></tr>
+    <tr><td>Oeste (Barreiras / LEM)</td><td>Grãos, algodão, bioinsumos, agricultura de precisão e maquinário</td><td>AIBA, cooperativas, CIMATEC Sertão</td><td><span class="badge b-alta">Alta</span></td></tr>
+    <tr><td>Vale do São Francisco (Juazeiro)</td><td>Fruticultura irrigada, rastreabilidade e gestão hídrica</td><td>Centro de Excelência em Fruticultura (FAEB), UNIVASF</td><td><span class="badge b-alta">Alta</span></td></tr>
+    <tr><td>Sul / Baixo Sul (Ilhéus)</td><td>Cacau-cabruca, bioinsumos, monitoramento florestal</td><td>UESC, Biofábrica de Cacau, Embrapa</td><td><span class="badge b-media">Média</span></td></tr>
+    <tr><td>Semiárido (Boa Vista do Tupim)</td><td>Caprinos/ovinos, convivência com a Caatinga, agricultura familiar</td><td>DAT Semear Digital já existente, CETAB</td><td><span class="badge b-media">Média</span></td></tr>
+  </table>
+  <div class="box box-acao">
+    <p style="margin-bottom:0;"><strong>Conexão com os capítulos anteriores:</strong> o Farm Lab é a <em>infraestrutura física</em> que dá corpo ao Distrito Agrotecnológico do Semear (Cap. VII), aplica os condicionantes da adoção (Cap. VIII) e abastece a ATER Digital com conteúdo validado (Cap. IX). Os quatro capítulos formam, juntos, um único sistema de inovação territorializado.</p>
+  </div>
+  <div class="topo"><a href="#topo">▲ voltar ao topo</a></div>
 </section>
 
 <!-- SÍNTESE INTEGRADORA -->
-<section>
+<section id="sintese">
   <h2 class="roxo"><span class="num">∑</span>Síntese Integradora das Práticas</h2>
   <div class="box box-pratica">
-    <p>A Bahia já possui os ativos, os programas e até um Distrito Agrotecnológico (Boa Vista do Tupim) necessários para fechar suas lacunas, mas opera de forma fragmentada. As três práticas são complementares e devem operar como um <strong>sistema único</strong>:</p>
+    <p>A Bahia já possui os ativos, os programas e até um Distrito Agrotecnológico (Boa Vista do Tupim) necessários para fechar suas lacunas, mas opera de forma fragmentada. As quatro práticas são complementares e devem operar como um <strong>sistema único territorializado</strong>:</p>
     <p style="margin-bottom:0;">
       <span class="pill">🛰️ Semear: método de diagnóstico + validação em campo</span> →
+      <span class="pill">🧪 Farm Lab: infraestrutura física de teste e demonstração</span> →
       <span class="pill">📗 Adoção: tecnologia certa, via cooperativa, com risco mitigado</span> →
       <span class="pill">📱 Ater Digital: canal que converte conectividade em adoção</span> →
       <span class="pill">🌾 Inclusão da agricultura familiar na Agricultura 4.0/5.0</span>
@@ -360,34 +409,34 @@
 </section>
 
 <!-- PLANO DE AÇÃO -->
-<section>
+<section id="plano">
   <h2><span class="num">✓</span>Plano de Ação por Horizonte Temporal</h2>
   <div class="box box-acao">
     <div class="timeline">
       <div class="t-item">
         <div class="t-prazo p-curto">Curto<br>0–12 meses</div>
-        <div class="t-desc">Corrigir e padronizar a base de dados adotando a metodologia agroambiental do Semear; criar painel público integrado conectividade + ATER; institucionalizar o WhatsApp com registro automatizado de atendimentos; mapear corredores produtivos prioritários para conexão.</div>
+        <div class="t-desc">Corrigir e padronizar a base de dados adotando a metodologia agroambiental do Semear; criar painel público integrado conectividade + ATER; institucionalizar o WhatsApp com registro automatizado de atendimentos; mapear corredores produtivos prioritários para conexão e definir os sítios dos Farm Labs.</div>
       </div>
       <div class="t-item">
         <div class="t-prazo p-medio">Médio<br>12–36 meses</div>
-        <div class="t-desc">Implantar Plano Estadual de Conectividade Agro (ANATEL/ConectarAGRO/cooperativas); estruturar DATs/Living Labs (Boa Vista do Tupim, Oeste, Vale do São Francisco, Sul); integrar a plataforma ATER+ Digital; capacitar extensionistas em metodologias digitais; canalizar fomento via cooperativas com mitigação de risco.</div>
+        <div class="t-desc">Implantar Plano Estadual de Conectividade Agro (ANATEL/ConectarAGRO/cooperativas); estruturar a rede de Farm Labs/DATs (Boa Vista do Tupim, Oeste, Vale do São Francisco, Sul) em modelo de inovação aberta; integrar a plataforma ATER+ Digital; capacitar extensionistas em metodologias digitais; canalizar fomento via cooperativas com mitigação de risco.</div>
       </div>
       <div class="t-item">
         <div class="t-prazo p-longo">Longo<br>+36 meses</div>
-        <div class="t-desc">Consolidar ATER digital híbrida com IA e sensoriamento remoto; condicionar transferência de tecnologia à aderência edafoclimática local; integrar conectividade, rastreabilidade e bioeconomia nas principais cadeias; institucionalizar a ponte agtechs–produtores, reduzindo o "vale da morte".</div>
+        <div class="t-desc">Consolidar ATER digital híbrida com IA e sensoriamento remoto; condicionar transferência de tecnologia à aderência edafoclimática local; integrar conectividade, rastreabilidade e bioeconomia nas principais cadeias; institucionalizar a ponte agtechs–produtores via Farm Labs, reduzindo o "vale da morte" e fixando startups no estado.</div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- CONCLUSÃO -->
-<section>
+<section id="conclusao">
   <h2><span class="num">∎</span>Conclusão</h2>
-  <p>A Bahia dispõe de ativos suficientes — universidades, Embrapa, CETAB, parques tecnológicos, hubs e agtechs — para liderar a inovação agropecuária no Nordeste. O que limita a conversão desse potencial em competitividade é a <strong>baixa capilaridade da infraestrutura digital e da extensão rural nas regiões produtoras</strong>. As práticas de referência analisadas mostram um caminho concreto: o método do <strong>Semear Digital</strong> aproxima ativos tecnológicos dos polos produtivos e padroniza a inteligência territorial; os <strong>condicionantes da adoção</strong> garantem que a tecnologia certa chegue ao produtor certo, ancorada na organização cooperativa e na mitigação de risco; e a <strong>ATER Digital</strong> fornece o canal que converte conectividade e conteúdo em adoção efetiva. Tratadas como um sistema integrado, e não como iniciativas isoladas, essas práticas têm potencial para incluir a agricultura familiar baiana na transição para a Agricultura 4.0/5.0 e ampliar a inserção das cadeias do estado em mercados de maior valor.</p>
+  <p>A Bahia dispõe de ativos suficientes — universidades, Embrapa, CETAB, parques tecnológicos, hubs e agtechs — para liderar a inovação agropecuária no Nordeste. O que limita a conversão desse potencial em competitividade é a <strong>baixa capilaridade da infraestrutura digital, da extensão rural e dos ambientes de validação nas regiões produtoras</strong>. As práticas de referência analisadas mostram um caminho concreto e encadeado: o método do <strong>Semear Digital</strong> aproxima ativos tecnológicos dos polos produtivos e padroniza a inteligência territorial; os <strong>Living Labs/Farm Labs</strong> oferecem a infraestrutura física de teste, validação e demonstração em condições reais; os <strong>condicionantes da adoção</strong> garantem que a tecnologia certa chegue ao produtor certo, ancorada na organização cooperativa e na mitigação de risco; e a <strong>ATER Digital</strong> fornece o canal que converte conectividade e conteúdo validado em adoção efetiva. Tratadas como um sistema único e territorializado, e não como iniciativas isoladas, essas práticas têm potencial para incluir a agricultura familiar baiana na transição para a Agricultura 4.0/5.0 e ampliar a inserção das cadeias do estado em mercados de maior valor.</p>
 </section>
 
 <footer>
-  <strong>Nota Técnica Gerencial</strong> — elaborada a partir da análise crítica do Diagnóstico Estadual de Inovação Agropecuária da Bahia, ampliada com práticas de referência do projeto Semear Digital (Embrapa Meio Ambiente, 2025), do estudo de condicionantes da adoção tecnológica (Souza Filho et al., 2011), da ATER Digital do Espírito Santo (Nascimento et al., 2024) e da plataforma ATER+ Digital (Embrapa).<br>
+  <strong>Nota Técnica Gerencial</strong> — elaborada a partir da análise crítica do Diagnóstico Estadual de Inovação Agropecuária da Bahia, ampliada com práticas de referência do projeto Semear Digital (Embrapa Meio Ambiente, 2025), do estudo de condicionantes da adoção tecnológica (Souza Filho et al., 2011), da ATER Digital do Espírito Santo (Nascimento et al., 2024), da plataforma ATER+ Digital (Embrapa) e dos modelos de Living Lab/Farm Lab do Advanced Farm 360 (UFSM/InovaTec) e do AgNest Farm Lab (Embrapa, Banco do Brasil, Bayer, Nutrien e Jacto).<br>
   Documento de caráter analítico e propositivo para apoio à decisão. Recomenda-se validação das inconsistências metodológicas sinalizadas antes de uso oficial.
 </footer>
 
